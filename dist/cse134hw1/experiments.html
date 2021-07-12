@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">  
+    <head>
+        <meta charset="utf-8" />
+        <title>Annie's Portfolio</title>
+        <link rel="stylesheet" href="styles/main2.css">
+    </head>
+    <body>
+        <header>
+            <nav>  
+                <ul>
+                    <li><a href="./indexp.html">HOME</a></li>
+                    <li><a href="./experiments.html">EXPERIMENTS</a></li>
+                </ul>
+            </nav>
+            <h1>EXPERIMENTS</h1>
+            <hr>
+        </header>
+        <main> 
+            <section id="text">
+                <h3>Journal Day 0</h3>
+                <p>I have decided to start journaling from today onwards. 
+                    Today is <b>Sunday 7/11/2021</b>. 
+                    I did nothing special <strong>yesterday</strong> and I did 
+                    nothing special <strong>today</strong>. I will <em>also</em> 
+                    do nothing special <strong>tomorrow</strong>.<br> 
+                    I did search up an interesting word today: 
+                    <i>megillah</i>, which means a lengthy and tediously 
+                    complicated situation or matter. <aside> Interestingly this 
+                    word seems to describe most of the problems in my life.</aside>
+                </p>
+            </section>
+            <hr>
+            <section id="picture">
+                <h3>Here is a picture of a dog that is not mine</h3>
+                <p>There are 3 different dogs. A different one
+                    comes out depending on what size your browser screen is.
+                </p>
+                <picture>
+                    <source srcset="images/dog2.jpg"
+                            media="(min-width: 800px)">
+                    <source srcset="images/dog4.jpg"
+                            media="(min-width: 700px)">
+                    <img src="images/dog3.jpg" alt="smallerscreendog"  width="300" height="200" />
+                </p>
+            </section>
+            <hr>
+            <section id="iframe">
+                <h3>An inline frame of the wikipedia article for dogs</h3>
+                <iframe id="inlineFrameExample"
+                    title="Wikipedia Article for Dogs"
+                    width="400"
+                    height="400"
+                    src="https://en.wikipedia.org/wiki/Dog">
+                </iframe>
+            </section>
+            <hr>
+            <section id="audio">
+                <h3>Audio file of a squeak</h3>
+                <audio controls loop>
+                    <source src="audio/squeak.ogg" type="audio/ogg">
+                </audio>
+            </section>
+            <hr>
+            <section id="video">
+                <h3>Video</h3>
+                <p>This is a video from 2010 of my and my brother feeding geese</p>
+                <video width="320" height="240" controls muted>
+                    <source src="videos/2010trim.mp4" type="video/mp4">
+                </video>
+            </section>
+            <hr>
+            <section id="canvasTest">
+                <h3>Canvas</h3>
+                <canvas id="canvas" width="200" height="120">
+                    <script>
+                        var c = document.getElementById("canvas");
+                        var ctx = c.getContext("2d");
+
+                        ctx.beginPath();
+                        ctx.arc(150, 60, 40, 0, 2 * Math.PI);;
+                        ctx.moveTo(25,25);
+                        ctx.lineTo(105,25);
+                        ctx.lineTo(25,105);
+                        ctx.fill();
+                    </script>
+                </canvas>
+            </section>
+            <hr>
+            <hr>
+            <section id="svgTest">
+                <h3>SVG</h3>
+                <svg width="170" height="100">
+                    <rect width="170" height="100" />
+                </svg>
+            </section>
+            <hr>
+        </main>
+        <footer>
+            Written By Annie Wong
+        </footer>
+    </body>
+</html>
