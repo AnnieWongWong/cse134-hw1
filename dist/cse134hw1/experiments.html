@@ -2,14 +2,14 @@
 <html lang="en">  
     <head>
         <meta charset="utf-8" />
-        <title>Annie's Portfolio</title>
+        <title>Annie's Experiments</title>
         <link rel="stylesheet" href="styles/main2.css">
     </head>
     <body>
         <header>
             <nav>  
                 <ul>
-                    <li><a href="./indexp.html">HOME</a></li>
+                    <li><a href="./index.html">HOME</a></li>
                     <li><a href="./experiments.html">EXPERIMENTS</a></li>
                 </ul>
             </nav>
@@ -28,14 +28,16 @@
                     relearned some JavaScript today like <code>console.log()</code>, which just 
                     logs things into the console. <br><br>
                     And here is a nice haiku I found online: <br>
-                    <pre>
-                        Winter by the pond
-                        Ice hangs from a craggy tree
-                        Where did the frogs go?
-                    </pre>
-                    <aside>Side note: Scotland has 421 different words for snow.
-                    Some of them are: <span><i>sneesl</i>, <i>feefle</i>, and <i>flinkdrinkin</i></span></aside>
                 </p>
+                <pre>
+                    Winter by the pond
+                    Ice hangs from a craggy tree
+                    Where did the frogs go?
+                </pre>
+                <aside>Side note: Scotland has 421 different words for snow.
+                Some of them are: <span><i>sneesl</i>, <i>feefle</i>, and <i>flinkdrinkin</i></span>
+                </aside>
+                
             </section>
             <hr>
             <section id="orderedToDoList">
@@ -59,7 +61,7 @@
                     <source srcset="images/dog4.jpg"
                             media="(min-width: 700px)">
                     <img src="images/dog3.jpg" alt="smallerscreendog"  width="300" height="200" />
-                </p>
+                </picture>
             </section>
             <hr>
             <section id="iframe">
@@ -115,19 +117,19 @@
             <hr>
             <section>
                 <h3>Pet Adoption Form</h3>
-                <form action="">
+                <form>
                     <fieldset>
                         <legend>Pet Adoption Form</legend>
                         <label for="fname">Full name:</label><br>
                         <input type="text" id="fname" name="fname"><br>
-                        <label for="income">Income:</label><br>
+                        <label for="income">Income Range:</label><br>
                         <input list="incomeOptions" name="income" id="income">
                         <datalist id="incomeOptions">
-                            <option value="&lt $50,000">
+                            <option value="&lt; $50,000">
                             <option value="$50,000 - $80,000">
                             <option value="$80,000 - $100,000">
                             <option value="$100,000 - $120,000">
-                            <option value="&gt $120,000">
+                            <option value="&gt; $120,000">
                         </datalist><br>
                         <label for="pets">Choose a dog/cat:</label><br>
                         <select name="pets" id="pets">
@@ -149,7 +151,7 @@
                             <p>You will not actually get a dog or cat from submitting this form.</p>
                           </details>
                         <br><br>
-                        <input type="submit"></button>
+                        <button type="submit">Submit</button>
                     </fieldset>
                 </form>
             </section>
@@ -199,7 +201,10 @@
         </main>
         <footer>
             <hr>
-            Written By Annie Wong
+            Written By Annie Wong <br>
+            <a href="https://github.com/AnnieWongWong">GitHub</a>
+            <a href="https://www.linkedin.com/in/awon/">LinkedIn</a>
+            <a href="mailto:anw104@ucsd.edu">Email</a>
         </footer>
     </body>
 </html>

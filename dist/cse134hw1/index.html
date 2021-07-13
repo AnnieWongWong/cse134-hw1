@@ -1,101 +1,134 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-	<meta charset="utf-8" />
-	<meta name="description" content="Simple demo Web page for CSE 134B" />
-	<meta name="keywords" content="HTML, CSS, JavaScript" />
-	<meta name="author" content="" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>CSE 134B Homework 1 Website</title>
-	<link href="images/favicon.ico" rel="icon" />
-	<link href="styles/main.css" rel="stylesheet" />
-	<script>
-		window.addEventListener('load', function () {
-			let time = window.performance.timing,
-				complete = time.domComplete - time.domLoading;
-			document.getElementById('page-load-info').innerHTML = `<strong>Page Loaded in ${parseInt(complete)}ms
-			 on ${new Date().toLocaleString("en-US")}</strong>`;
-		});
-	</script>
-</head>
-
-<body>
-	<header>
-		<h1> Annie's Website</h1>
-		
-		<section id="user-info-component">
-			<div id="user-info" style="display: none;">
-				<output id="name-info">&nbsp;</output>
-				<br />
-				<output id="major-info">&nbsp;</output>
-				<hr />
-				<br />
-				<!-- Inline Javascript Handlers used here for demonstration only -->
-				<section class="intro-text">
-					<label>My name is <input id="name-input" type="text" autocomplete="name" autofocus maxlength="30" placeholder="Your Name"></label>
-					<br />
-					<label>My major is <input id="major-input" type="text" maxlength="30" placeholder="Your Major"></label>
-				</section>
-	
-				<button onclick="window.update();">Update</button>
-			</div>
-			<script>
-				document.getElementById('user-info').style.display = 'block';
-			</script>
-			<noscript class="error">Error: JavaScript is disabled or blocked.</noscript>
-		</section>
-
-
-		<section id="page-load-component">
-			<div id="load-info" style="display: none;">
-				<output id="page-load-info">Measuring...</output>
-			</div>
-			<script>
-				document.getElementById('load-info').style.display = 'block';
-			</script>
-			<noscript class="error">Error: JavaScript required for page timing measurement </noscript>
-		</section>
-	</header>
-
-	<main>
-		<h2>UCSD Images</h2>
-		<section class="img">
-			<img src="images/bear.png" alt="Warren Bear" height="430" width="700" />
-			<img src="images/triton.jpg" alt="Triton" height="430" width="700" />
-			<a href="https://ucsd.edu" target="_blank"><img src="images/ucsd.gif" alt="UCSD" height="177"
-				width="700"></a>
-			<br />
-			<section id="links">
-				<h2>Useful Links</h2>
-				<ul>
-					<li><a href="http://tritonlink.ucsd.edu">TritonLink</a></li>
-					<li><a href="http://canvas.ucsd.edu">Canvas</a></li>
-					<li><a href="http://w3.org">W3</a></li>
-				</ul>
-			</section>
-
-		<section class="video">
-			<h2>UCSD Promo Video</h2>
-			<video controls height="393" width="700">
-				<source src="videos/videoplayback.mp4" type="video/mp4" />
-				<div class="error">Your browser does not support the video tag.</div>
-			</video>
-		</section>
-			<br />
-
-		</section>
-	</main>
-
-	<footer>
-		<hr/>
-		<p>💯This page was made with &hearts; by Annie 💯</p>
-	</footer>
-	<script type="module">
-		import { update } from './scripts/main.js';
-		window.update = update;
-	</script>
-	<script nomodule src="scripts/main-es5.js"></script>
-</body>
-
+<html lang="en">  
+    <head>
+        <meta charset="utf-8" />
+        <title>Annie's Portfolio</title>
+        <link rel="stylesheet" href="styles/main2.css">
+        <style>
+            button {
+                color: black;
+            }
+        </style>
+        <script>
+            console.log('TESTING');
+        </script>
+    </head>
+    <body>
+        <header>
+            <nav>  
+                <ul>
+                    <li><a href="./index.html">HOME</a></li>
+                    <li><a href="./experiments.html">EXPERIMENTS</a></li>
+                </ul>
+            </nav>
+            <h1>ANNIE WONG</h1>
+            <p>Computer Science Student</p>
+            <input type="submit" value="Contact Me" />
+            <hr>
+        </header>
+        <main>
+            <section id="ABOUTME">
+                <h2>ABOUT ME</h2>
+                <p>Hello! I am an undergraduate student at UC San Diego pursuing a degree in computer science with a 
+                    minor in economics. I love the process of planning, designing, and building software and algorithms 
+                    and I am excited to gain new skills and experiences that will aid me on my quest to build better 
+                    algorithms and programs!
+                </p>
+            </section>
+            <hr> 
+            <section id="EXPERIENCE">
+                <h2>EXPERIENCE</h2>
+                <h3>Research Assistant at University of California, San Diego</h3>
+                <p>Sep 2019 - Jun 2020</p>
+                <img src="images/dog1.jpg" alt="dog1" width="200" height="200">
+                <details>
+                    <summary>Details</summary>
+                    <ul>
+                        <li>In a team of four, performed research on improving text line segmentation for optical character recognition on machine-printed historical documents.</li>
+                        <li>Built text line segmentation algorithms for historical documents using histogram projection and connected component analysis.</li>
+                        <li>Implemented a convolutional neural network for page layout analysis and text line segmentation.</li>
+                        <li>Other contributions include: literature searching, proposal writing, and project management.</li>
+                    </ul>
+                </details>
+            </section>
+            <hr>   
+            <section id="PROJECTS">
+                <h2>PROJECTS</h2>
+                <div class="leftProj">
+                    <h3>WIC Winter Dev Projects - TimeQuilt</h3>
+                    <p>Mobile Application <br>January 2021 - May 2021</p>
+                    <img src="images/dog2.jpg" alt="dog2" width="270" height="200">
+                    <details>
+                        <summary>Details</summary>
+                        <ul>
+                            <li>3rd place winner out of 8 teams.</li>
+                            <li>In a team of 5, developed a mobile application for journaling and tracking events that occur throughout the week.</li>
+                            <li>Contributions include: front end interface implementation, app navigation implementation, back end debugging, and document preparation.</li>
+                            <li>Tools and technologies used: Node.js, React Native, Expo, Firebase, Figma, Lucidchart, JavaScript, HTML/CSS.</li>
+                        </ul>
+                    </details>
+                </div>
+                <div class="midProj">
+                    <h3>ACM Side Projects - Cocial</h3>
+                    <p>Mobile Application<br>Jan 2021 - April 2021</p>
+                    <img src="images/dog3.jpg" alt="dog3" width="260" height="200">
+                    <details>
+                        <summary>Details</summary>
+                        <ul>
+                            <li>In a team of 6, developed a mobile application dedicated to helping individuals and groups organize gatherings and events.</li>
+                            <li>Contributions include: front end interface implementation, app navigation implementation, and integration of front end with back end.</li>
+                            <li>Tools and technologies used: Node.js, React Native, Expo, MongoDB, Figma, Lucidchart, TypeScript, HTML/CSS.</li>
+                        </ul>
+                    </details>
+                </div>
+                <div class="rightProj">
+                    <h3>GaryIsWin</h3>
+                    <p>Mobile Application / Game<br>Spring 2020</p>
+                    <img src="images/dog4.jpg" alt="dog4" width="200" height="200">
+                    <details>
+                        <summary>Details</summary>
+                        <ul>
+                            <li>In a team of 10, developed a mobile game inspired by award-winning puzzle game Baba Is You.</li>
+                            <li>Contributed to implementation of game mechanics and project documentation/management.</li>
+                            <li>Utilized Agile strategies to promote steady production.</li>
+                        </ul>
+                    </details>
+                </div>
+                <div class="leftProj">
+                    <h3>RShell</h3>
+                    <p>Unix Shell / Command Line Interface - C++<br>Mar 2020 - Jun 2020</p>
+                    <img src="images/dog5.jpg" alt="dog4" width="200" height="200">
+                    <details>
+                        <summary>Details</summary>
+                        <ul>
+                            <li>Programmed a composite pattern based program to support UNIX commands, I/O redirection, and operator precedence.</li>
+                            <li>Developed unit and integration tests using Google Test framework to assess program functionality.</li>
+                            <li>Utilized Agile strategies and stand-up meetings to promote steady production.</li>
+                        </ul>
+                    </details>
+                </div>
+            </section>
+            <hr> 
+            <section id="SKILLS">
+                <h2>SKILLS</h2>
+                <ul>
+                    <li>C/C++</li>
+                    <li>Java</li>
+                    <li>Python</li>
+                    <li>HTML</li>
+                    <li>SQL</li>
+                    <li>Git</li>
+                    <li>Node.js</li>
+                    <li>React Native</li>
+                </ul>
+            </section>
+        </main>
+        <footer>
+            <hr>
+            Written By Annie Wong <br>
+            <a href="https://github.com/AnnieWongWong">GitHub</a>
+            <a href="https://www.linkedin.com/in/awon/">LinkedIn</a>
+            <a href="mailto:anw104@ucsd.edu">Email</a>
+        </footer>
+    </body>
 </html>
