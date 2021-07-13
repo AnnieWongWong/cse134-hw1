@@ -21,14 +21,31 @@
                 <h3>Journal Day 0</h3>
                 <p>I have decided to start journaling from today onwards. 
                     Today is <b>Sunday 7/11/2021</b>. 
-                    I did nothing special <strong>yesterday</strong> and I did 
-                    nothing special <strong>today</strong>. I will <em>also</em> 
-                    do nothing special <strong>tomorrow</strong>.<br> 
-                    I did search up an interesting word today: 
-                    <i>megillah</i>, which means a lengthy and tediously 
-                    complicated situation or matter. <aside> Interestingly this 
-                    word seems to describe most of the problems in my life.</aside>
+                    I did nothing special <strong>today</strong> and I did 
+                    nothing special <strong>yesterday</strong>. I <em>also</em> expect 
+                    to do nothing special <strong>tomorrow</strong>.<br> 
+                    I did look up some really cool pictures of snowy terrain today.<br> I also 
+                    relearned some JavaScript today like <code>console.log()</code>, which just 
+                    logs things into the console. <br><br>
+                    And here is a nice haiku I found online: <br>
+                    <pre>
+                        Winter by the pond
+                        Ice hangs from a craggy tree
+                        Where did the frogs go?
+                    </pre>
+                    <aside>Side note: Scotland has 421 different words for snow.
+                    Some of them are: <span><i>sneesl</i>, <i>feefle</i>, and <i>flinkdrinkin</i></span></aside>
                 </p>
+            </section>
+            <hr>
+            <section id="orderedToDoList">
+                <h3>To Do List</h3>
+                <ol>
+                    <li>Look for an apartment</li>
+                    <li>Clean up Github repositories</li>
+                    <li>Apply for jobs</li>
+                    <li>Bake that cake</li>
+                </ol>
             </section>
             <hr>
             <section id="picture">
@@ -56,7 +73,7 @@
             </section>
             <hr>
             <section id="audio">
-                <h3>Audio file of a squeak</h3>
+                <h3>Audio file of a kid saying "Hey, listen"</h3>
                 <audio controls loop>
                     <source src="audio/squeak.ogg" type="audio/ogg">
                 </audio>
@@ -71,7 +88,8 @@
             </section>
             <hr>
             <section id="canvasTest">
-                <h3>Canvas</h3>
+                <h3>Canvas Experiment</h3>
+                <p>Here is a triangle next to a square</p>
                 <canvas id="canvas" width="200" height="120">
                     <script>
                         var c = document.getElementById("canvas");
@@ -87,16 +105,100 @@
                 </canvas>
             </section>
             <hr>
-            <hr>
             <section id="svgTest">
-                <h3>SVG</h3>
+                <h3>SVG Experiment</h3>
+                <p>Here is a rectangle</p>
                 <svg width="170" height="100">
                     <rect width="170" height="100" />
                 </svg>
             </section>
             <hr>
+            <section>
+                <h3>Pet Adoption Form</h3>
+                <form action="">
+                    <fieldset>
+                        <legend>Pet Adoption Form</legend>
+                        <label for="fname">Full name:</label><br>
+                        <input type="text" id="fname" name="fname"><br>
+                        <label for="income">Income:</label><br>
+                        <input list="incomeOptions" name="income" id="income">
+                        <datalist id="incomeOptions">
+                            <option value="&lt $50,000">
+                            <option value="$50,000 - $80,000">
+                            <option value="$80,000 - $100,000">
+                            <option value="$100,000 - $120,000">
+                            <option value="&gt $120,000">
+                        </datalist><br>
+                        <label for="pets">Choose a dog/cat:</label><br>
+                        <select name="pets" id="pets">
+                            <optgroup label="Dogs">
+                                <option value="Samoyed">Samoyed</option>
+                                <option value="GermanShepherd">German Shepherd</option>
+                            </optgroup>
+                            <optgroup label="Cats">
+                                <option value="MaineCoon">Maine Coon</option>
+                                <option value="ScottishFold">Scottish Fold</option>
+                            </optgroup>
+                        </select><br>
+                        
+                        <label for="whyPetAdoption">Why do you think you would be a good pet owner?</label><br>
+                        <textarea id="whyPetAdoption" name="whyPetAdoption" rows="4" cols="50">
+                        </textarea>
+                        <details>
+                            <summary>Disclaimer</summary>
+                            <p>You will not actually get a dog or cat from submitting this form.</p>
+                          </details>
+                        <br><br>
+                        <input type="submit"></button>
+                    </fieldset>
+                </form>
+            </section>
+            <hr>
+            <section>
+                <h3>Samoyed dog that you cannot see, because it is hidden by the template tag</h3>
+                <template id="SamoyedDog">
+                    <img src="images/dog7.jpg" alt="dog7" width="200" height="200">
+                </template>
+            </section>
+            <hr>
+            <section>
+                <h3>Table Example</h3>
+                <table>
+                    <caption>Available dogs at the local adoption center</caption>
+                    <colgroup>
+                        <col style="background-color:rgb(255, 161, 161)">
+                        <col style="background-color:rgb(151, 155, 252)">
+                        <col style="background-color:rgb(142, 253, 149)">
+                    </colgroup>
+                    <tr>
+                      <th>Name</th>
+                      <th>Age</th>
+                      <th>Type</th>
+                    </tr>
+                    <tr>
+                      <td>Croissant</td>
+                      <td>2</td>
+                      <td>Pomeranian</td>
+                    </tr>
+                    <tr>
+                      <td>Cola</td>
+                      <td>4</td>
+                      <td>Bulldog</td>
+                    </tr>
+                    <tr>
+                        <td>Nugget</td>
+                        <td>5</td>
+                        <td>Chow Chow</td>
+                      </tr>
+                  </table>
+                  <figure>
+                    <img src="images/dog8.jpg" alt="Nugget" width="250" height="200">
+                    <figcaption>Fig.1 Nugget the Chow Chow</figcaption>
+                  </figure>
+            </section>
         </main>
         <footer>
+            <hr>
             Written By Annie Wong
         </footer>
     </body>
