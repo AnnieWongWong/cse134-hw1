@@ -5,26 +5,34 @@
         <title>Annie's Portfolio</title>
         <link rel="stylesheet" href="styles/main2.css">
         <style>
+            :root {
+                --main-blue-color: rgb(48,74,125);
+            }
+
             html,
             body {
-                background-color: rgb(255, 255, 255);
+                background-color: rgb(247,247,247);
+                font-family: emoji;
                 height: 100%;
             }  
+
             * {
                 margin: 0px;
                 padding: 0px;
             }
+
             #navbar{
-                background-color: rgb(255, 255, 255);
+                background-color: rgb(247,247,247);
                 list-style-type: none;
                 overflow: hidden;
-                border-bottom: 2px solid rgb(48,74,125);
+                border-bottom: 2px solid var(--main-blue-color);
             }
             
             li a {
                 display: block;           
-                background-color: rgb(48,74,125);   
-                color: rgb(255, 255, 255);
+                background-color: black;
+                margin-bottom: -1px;  
+                color: white;
                 padding: 18px 0px;
                 width: 25%;
                 text-decoration: none;
@@ -33,37 +41,73 @@
             }
             
             li a:hover {
-                background-color: rgb(29, 28, 28);
+                background-color: rgb(73, 97, 143);
                 color: white;
             }
 
             #active {
-                background-color: #000000;
-                 color: rgb(255, 255, 255); 
+                background-color: var(--main-blue-color);
+                 color: white); 
             }
             
             #banner {
-                background-color: rgb(226,227,229);
+                background-color: var(--main-blue-color);;
                 background-image: url(images/pexels-photo-302905.jpeg);
                 height: 500px;
-                background-position: 0% 50%;
+                background-position: 0% 70%;
                 background-repeat: no-repeat;
                 background-size: 1068px 712px;
+                background-size: 100%, 100%;
             }
             
             #bannerContents {
                 padding-top: 11%;
                 text-align: center;
-                color: rgb(255, 255, 255);
+                color: white;
             }
 
-            p:first-of-type {
-                padding-top: 12px;
+            #titles {
+                margin-top: 12px;
             }   
 
-            input:first-of-type {
+            #contactMeButton {
                 margin-top: 22px;
             } 
+
+            section {
+                margin: 20px;
+            }
+
+            h2 {
+                margin-bottom: 12px;
+            }
+
+            h3 {
+                margin-bottom: 0px;
+            }
+
+            p.descDate {
+                margin-bottom: 10px;
+            }
+
+            details {
+                margin-bottom: 20px;
+            }
+
+            details ul {
+                margin-bottom: 20px;
+                margin-left: 17.7px;
+            }
+
+            #skillList {
+                margin-left: 30px;
+                -moz-column-count: 1;
+                -moz-column-gap: 20px;
+                -webkit-column-count: 1;
+                -webkit-column-gap: 20px;
+                column-count: 1;
+                column-gap: 20px;
+            }
 
         </style>
         <script>
@@ -81,9 +125,9 @@
 
             <div id="banner">
                 <div id="bannerContents">
-                    <h1>ANNIE WONG</h1>
-                    <p>Computer Science B.S. - University of California, San Diego</p>
-                    <input type="submit" value="Contact Me" />
+                    <h1 id="name">ANNIE WONG</h1>
+                    <p id="titles">Computer Science B.S. - University of California, San Diego</p>
+                    <input id="contactMeButton" type="submit" value="Contact Me" />
                 </div>  
             </div>
                     
@@ -100,9 +144,9 @@
             </section>
             <hr> 
             <section id="EXPERIENCE">
-                <h2>EXPERIENCE</h2>
-                <h3>Research Assistant at University of California, San Diego</h3>
-                <p>Sep 2019 - Jun 2020</p>
+                <h2 class="subHead">EXPERIENCE</h2>
+                <h3>UC San Diego Computer Science Department</h3>
+                <p class="descDate">Reseach Assiatant<br>Sep 2019 - Jun 2020</p>
                 <img src="images/dog1.jpg" alt="dog1" width="200" height="200">
                 <details>
                     <summary>Details</summary>
@@ -116,10 +160,10 @@
             </section>
             <hr>   
             <section id="PROJECTS">
-                <h2>PROJECTS</h2>
+                <h2 class="subHead">PROJECTS</h2>
                 <div class="leftProj">
                     <h3>WIC Winter Dev Projects - TimeQuilt</h3>
-                    <p>Mobile Application <br>January 2021 - May 2021</p>
+                    <p class="descDate">Mobile Application <br>January 2021 - May 2021</p>
                     <img src="images/dog2.jpg" alt="dog2" width="270" height="200">
                     <details>
                         <summary>Details</summary>
@@ -133,7 +177,7 @@
                 </div>
                 <div class="midProj">
                     <h3>ACM Side Projects - Cocial</h3>
-                    <p>Mobile Application<br>Jan 2021 - April 2021</p>
+                    <p class="descDate">Mobile Application<br>Jan 2021 - April 2021</p>
                     <img src="images/dog3.jpg" alt="dog3" width="260" height="200">
                     <details>
                         <summary>Details</summary>
@@ -146,7 +190,7 @@
                 </div>
                 <div class="rightProj">
                     <h3>GaryIsWin</h3>
-                    <p>Mobile Application / Game<br>Spring 2020</p>
+                    <p class="descDate">Mobile Application / Game<br>Spring 2020</p>
                     <img src="images/dog4.jpg" alt="dog4" width="200" height="200">
                     <details>
                         <summary>Details</summary>
@@ -159,7 +203,7 @@
                 </div>
                 <div class="leftProj">
                     <h3>RShell</h3>
-                    <p>Unix Shell / Command Line Interface - C++<br>Mar 2020 - Jun 2020</p>
+                    <p class="descDate">Unix Shell / Command Line Interface - C++<br>Mar 2020 - Jun 2020</p>
                     <img src="images/dog5.jpg" alt="dog4" width="200" height="200">
                     <details>
                         <summary>Details</summary>
@@ -174,15 +218,10 @@
             <hr> 
             <section id="SKILLS">
                 <h2>SKILLS</h2>
-                <ul>
-                    <li>C/C++</li>
-                    <li>Java</li>
-                    <li>Python</li>
-                    <li>HTML</li>
-                    <li>SQL</li>
-                    <li>Git</li>
-                    <li>Node.js</li>
-                    <li>React Native</li>
+                <ul id="skillList">
+                    <li>Languages: C/C++, Java, Python, HTML/CSS, SQL</li>
+                    <li>Technologies: Git, NodeJS, React Native</li>
+                    <li>Tools: Figma, VS Code</li>
                 </ul>
             </section>
         </main>
