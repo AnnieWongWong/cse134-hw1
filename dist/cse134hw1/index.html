@@ -5,9 +5,66 @@
         <title>Annie's Portfolio</title>
         <link rel="stylesheet" href="styles/main2.css">
         <style>
-            button {
-                color: black;
+            html,
+            body {
+                background-color: rgb(255, 255, 255);
+                height: 100%;
+            }  
+            * {
+                margin: 0px;
+                padding: 0px;
             }
+            #navbar{
+                background-color: rgb(255, 255, 255);
+                list-style-type: none;
+                overflow: hidden;
+                border-bottom: 2px solid rgb(48,74,125);
+            }
+            
+            li a {
+                display: block;           
+                background-color: rgb(48,74,125);   
+                color: rgb(255, 255, 255);
+                padding: 18px 0px;
+                width: 25%;
+                text-decoration: none;
+                text-align: center;
+                float: left;
+            }
+            
+            li a:hover {
+                background-color: rgb(29, 28, 28);
+                color: white;
+            }
+
+            #active {
+                background-color: #000000;
+                 color: rgb(255, 255, 255); 
+            }
+            
+            #banner {
+                background-color: rgb(226,227,229);
+                background-image: url(images/pexels-photo-302905.jpeg);
+                height: 500px;
+                background-position: 0% 50%;
+                background-repeat: no-repeat;
+                background-size: 1068px 712px;
+            }
+            
+            #bannerContents {
+                padding-top: 11%;
+                text-align: center;
+                color: rgb(255, 255, 255);
+            }
+
+            p:first-of-type {
+                padding-top: 12px;
+            }   
+
+            input:first-of-type {
+                margin-top: 22px;
+            } 
+
         </style>
         <script>
             console.log('TESTING');
@@ -16,14 +73,20 @@
     <body>
         <header>
             <nav>  
-                <ul>
-                    <li><a href="./index.html">HOME</a></li>
-                    <li><a href="./experiments.html">EXPERIMENTS</a></li>
+                <ul id="navbar">
+                    <li><a class="leftButton" id="active" href="./index.html">Home</a></li>
+                    <li><a class="rightButton" href="./experiments.html">Experiments</a></li>
                 </ul>
             </nav>
-            <h1>ANNIE WONG</h1>
-            <p>Computer Science Student</p>
-            <input type="submit" value="Contact Me" />
+
+            <div id="banner">
+                <div id="bannerContents">
+                    <h1>ANNIE WONG</h1>
+                    <p>Computer Science B.S. - University of California, San Diego</p>
+                    <input type="submit" value="Contact Me" />
+                </div>  
+            </div>
+                    
             <hr>
         </header>
         <main>
